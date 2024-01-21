@@ -34,16 +34,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>        
-</string>
+				<string></string>
 				<key>leading</key>
 				<string>        super.viewDidLoad()
         view.backgroundColor = .systemBackground
-</string>
+        </string>
 				<key>trailing</key>
-				<string>        let hvc = UINavigationController(rootViewController: HomeViewController())
+				<string>
+        let hvc = UINavigationController(rootViewController: HomeViewController())
         let svc = UINavigationController(rootViewController: SearchViewController())
-        let nvc = UINavigationController(rootViewController: NotificationsViewController())
 </string>
 			</dict>
 			<key>type</key>
