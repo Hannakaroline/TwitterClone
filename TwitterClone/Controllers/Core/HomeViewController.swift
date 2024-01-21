@@ -16,12 +16,32 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
+    private func configureNavigationBar() {
+        let size: CGFloat = 36
+        let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height:  size))
+        logoImageView.contentMode = .scaleAspectFill
+        logoImageView.image = UIImage(named: "twitter_logo")
+        
+        let middleView = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        middleView.addSubview(logoImageView)
+        navigationItem.titleView = middleView
+        
+        let profileImage = UIImage(systemName: "person")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: profileImage, style: .plain, target: self, action: #selector(didTapProfile))
+    }
+    
+    @objc private func didTapProfile() {
+        let vc = ProfileViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(timeLineTableView)
         timeLineTableView.delegate = self
         timeLineTableView.dataSource = self
+        configureNavigationBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -40,6 +60,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as? TweetTableViewCell else {
             return UITableViewCell()
         }
+        cell.delegate = self
         return cell
+    }
+}
+
+extension HomeViewController: TweetTableViewDelegate {
+    func tweetTableViewCellDidTapReply() {
+        print("reply")
+    }
+    
+    func tweetTableViewCellDidTapRetweet() {
+        print("retweet")
+    }
+    
+    func tweetTableViewCellDidTapLike() {
+        print("like")
+    }
+    
+    func tweetTableViewCellDidTapShare() {
+        print("share")
     }
 }

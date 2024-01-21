@@ -7,10 +7,20 @@
 
 import UIKit
 
+protocol TweetTableViewDelegate: AnyObject {
+    func tweetTableViewCellDidTapReply()
+    func tweetTableViewCellDidTapRetweet()
+    func tweetTableViewCellDidTapLike()
+    func tweetTableViewCellDidTapShare()
+}
+
 class TweetTableViewCell: UITableViewCell {
+
     // MARK: - Public properties
     static let identifier = "TweetTableViewCell"
     
+    weak var delegate: TweetTableViewDelegate?
+
     // MARK: - Private properties
     private let actionSpacing: CGFloat = 60
     
@@ -94,6 +104,31 @@ class TweetTableViewCell: UITableViewCell {
         contentView.addSubview(displayNameLabel)
         contentView.addSubview(tweetTextContentLabel)
         configureConstraints()
+        configureButtons()
+    }
+    
+    @objc private func didTapReply() {
+        delegate?.tweetTableViewCellDidTapReply()
+    }
+        
+    @objc private func didTapRetweet() {
+        delegate?.tweetTableViewCellDidTapRetweet()
+    }
+        
+    @objc private func didTapLike() {
+        delegate?.tweetTableViewCellDidTapLike()
+    }
+        
+    @objc private func didTapShare() {
+        delegate?.tweetTableViewCellDidTapShare()
+    }
+        
+        
+    private func configureButtons() {
+        replyButton.addTarget(self, action: #selector(didTapReply), for: .touchUpInside)
+        retweetButton.addTarget(self, action: #selector(didTapRetweet), for: .touchUpInside)
+        likeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
+        shareButton.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
     }
     
     private func configureConstraints() {

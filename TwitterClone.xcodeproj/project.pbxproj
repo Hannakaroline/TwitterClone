@@ -20,6 +20,7 @@
 		F53AFB8F2B5D004A0094FADE /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB8E2B5D004A0094FADE /* NotificationsViewController.swift */; };
 		F53AFB912B5D00580094FADE /* DirectMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB902B5D00580094FADE /* DirectMessagesViewController.swift */; };
 		F53AFB942B5D08C80094FADE /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB932B5D08C80094FADE /* TweetTableViewCell.swift */; };
+		F53AFB972B5D3A2A0094FADE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB962B5D3A2A0094FADE /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F53AFB8E2B5D004A0094FADE /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		F53AFB902B5D00580094FADE /* DirectMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesViewController.swift; sourceTree = "<group>"; };
 		F53AFB932B5D08C80094FADE /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		F53AFB962B5D3A2A0094FADE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		F53AFB882B5D00110094FADE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F53AFB952B5D3A110094FADE /* General */,
 				F53AFB922B5D086F0094FADE /* Views */,
 				F53AFB892B5D00190094FADE /* Core */,
 			);
@@ -161,6 +164,14 @@
 				F53AFB932B5D08C80094FADE /* TweetTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F53AFB952B5D3A110094FADE /* General */ = {
+			isa = PBXGroup;
+			children = (
+				F53AFB962B5D3A2A0094FADE /* ProfileViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 				F53AFB8F2B5D004A0094FADE /* NotificationsViewController.swift in Sources */,
 				F53AFB5B2B5CFEE90094FADE /* SceneDelegate.swift in Sources */,
 				F53AFB8B2B5D002D0094FADE /* HomeViewController.swift in Sources */,
+				F53AFB972B5D3A2A0094FADE /* ProfileViewController.swift in Sources */,
 				F53AFB912B5D00580094FADE /* DirectMessagesViewController.swift in Sources */,
 				F53AFB942B5D08C80094FADE /* TweetTableViewCell.swift in Sources */,
 			);
