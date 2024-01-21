@@ -32,7 +32,6 @@ class TweetTableViewCell: UITableViewCell {
         imageView.layer.masksToBounds = true
         imageView.clipsToBounds = true
         imageView.image = UIImage(named: "princess")
-        imageView.backgroundColor = .red
         return imageView
     }()
     

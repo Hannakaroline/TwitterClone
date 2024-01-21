@@ -21,6 +21,7 @@
 		F53AFB912B5D00580094FADE /* DirectMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB902B5D00580094FADE /* DirectMessagesViewController.swift */; };
 		F53AFB942B5D08C80094FADE /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB932B5D08C80094FADE /* TweetTableViewCell.swift */; };
 		F53AFB972B5D3A2A0094FADE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB962B5D3A2A0094FADE /* ProfileViewController.swift */; };
+		F53AFB992B5D43FD0094FADE /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53AFB982B5D43FD0094FADE /* ProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F53AFB902B5D00580094FADE /* DirectMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesViewController.swift; sourceTree = "<group>"; };
 		F53AFB932B5D08C80094FADE /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		F53AFB962B5D3A2A0094FADE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F53AFB982B5D43FD0094FADE /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F53AFB932B5D08C80094FADE /* TweetTableViewCell.swift */,
+				F53AFB982B5D43FD0094FADE /* ProfileHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53AFB992B5D43FD0094FADE /* ProfileHeader.swift in Sources */,
 				F53AFB8D2B5D003E0094FADE /* SearchViewController.swift in Sources */,
 				F53AFB5D2B5CFEE90094FADE /* MainTabBarViewController.swift in Sources */,
 				F53AFB592B5CFEE90094FADE /* AppDelegate.swift in Sources */,
